@@ -31,6 +31,12 @@ print ( a.pop() )
 print ( a.append(1.22))
 print (a)
 
+# Loop through list
+# for i in a:
+# for i in range(len(a)):
+
+
+
 # Tuples
 print ("=========== Tuples ================")
 
@@ -40,6 +46,11 @@ print (tupl[1:4])
 
 print (tupl[-2])
 
+# Loop for Tuples
+# for i in tupl:
+# for i in range(len(tupl)):
+# for i in range(0, len(tupl), 2):
+# for i in range(len(tupl)-1, -1, -1):
 
 
 # SET
@@ -83,6 +94,15 @@ for i in a:
 
 print ("========")
 
+# Dictionary loop patterns
+
+# for <key> in <dict>:
+# for <key> in <dict>.keys():
+# for <value> in <dict>.values():
+# for <key>, <value> in <dict>.items():
+
+
+
 # display only values
 for i in a.values():
     print ( i )
@@ -112,6 +132,13 @@ print (dict(zip(b,a)))      # Display Key and value in Dict format
 
 print ( c["Mango"] )        # find the value of dict
 
+# Comprehensions
+
+# List:  {<element> for <element> in <iterable> if <condition>}
+# dict:  {<key>: <value> for <key>, <value> in <iterable> if <condition>}
+# set:   {<element> for <element> in <iterable> if <condition>}
+# tuple: (<element> for <element> in <iterable> if <condition>)
+
 # Dict comphrehension
 print ("=========== Dictionary Comprehension ================") 
 
@@ -121,6 +148,12 @@ result = {i: "Even" if i%2==0  else "Odd" for i in num}
 
 print (result)
 
+squares_dict = {i: i**2 for i in range(1, 11)}
+print (squares_dict)
+
+square_sum = sum(i**2 for i in range(1, 11))   # sum of squares from 1 to 10
+print(square_sum)
+
 
 
 
@@ -129,3 +162,19 @@ print ("Banana" in a)
 print ("Apple" in a)
 print ("Orange" in a)
 
+
+# List comprehension
+print ("=========== List Comprehension ================") 
+
+# Basic List 
+squares = []
+for i in range(1, 11):
+    squares.append(i**2)
+
+# List comprehension
+squares = [i**2 for i in range(1, 11)]
+
+print(squares)
+
+squares_div_4 = [i**2 for i in range(1, 11) if i % 4 == 0]          # Include only those numbers which are divisible by 4
+print(squares_div_4)
